@@ -1,10 +1,53 @@
-\textbf{Q1.} (0,5 puntos)
+\textbf{Q1.} (1 punto)
 
 
 \vspace{20px}
 \textit{Solución:}
 \\
 
+El potencial $V(r)$ se nos da en coordenadas esféricas y se nos pide expresarlo en coordenadas cilíndricas. Para ello,
+utilizamos las relaciones entre este par de sistemas de coordenadas:
+
+\begin{align*}
+    & \rho = r \; \sen\theta \\
+    & \varphi = \varphi \\
+    & z = r \; \cos\theta
+\end{align*}
+
+De estas relaciones obtenemos:
+
+\begin{equation*}
+    \rho^2 + z^2 = r^2 \hspace{12px} \Rightarrow  \hspace{12px} r = \sqrt{ \rho^2 + z^2}
+\end{equation*}
+
+Podemos entonces expresar el potencial en coordenadas cilíndricas como:
+
+\begin{equation*}
+    V(\rho, z) = \frac{A}{\sqrt{ \rho^2 + z^2}}
+\end{equation*}
+
+La ecuación de Laplace en coordenadas cilíndricas toma la forma:
+
+\begin{equation*}
+    \frac{1}{\rho} \frac{\partial}{\partial \rho} \biggl( \rho \, \frac{V}{\partial \rho} \biggr)
+    +
+    \frac{1}{\rho^2}  \biggl( \frac{\partial^2 V}{\partial \varphi^2} \biggr)
+    +
+    \frac{\partial^2 V}{\partial z^2} = 0
+\end{equation*}
+
+Calculamos las derivadas parciales:
+
+\begin{align*}
+    \frac{\partial V}{\partial \rho}   & = - \frac{A \, \rho}{(\rho^2 + z^2)^{3/2}} & \\[12px]
+    \frac{1}{\rho} \frac{\partial}{\partial \rho}  \biggl( \rho \, \frac{V}{\partial \rho} \biggr)  & =
+    \frac{A ( \rho^2 - 2z^2)}{(\rho^2 + z^2)^{5/2}} & (1) \\[12px]
+    \frac{\partial V}{\partial \rho} &= 0 & (2) \\[12px]
+    \frac{\partial V}{\partial z} &= - \frac{A \, z}{(\rho^2 + z^2)^{3/2}} &  \\[12px]
+    \frac{\partial^2 V}{\partial z^2} &= \frac{A (- \rho^2 + 2z^2)}{(\rho^2 + z^2)^{5/2}} & (3)
+\end{align*}
+
+Sumando (1), (2) y (3) comprobamos que $\Delta^2 V = 0$ y, por tanto, $V$ cumple la ecuación de Laplace en coordenadas cilíndricas.
 
 
 
