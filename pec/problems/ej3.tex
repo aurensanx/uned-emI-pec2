@@ -15,4 +15,65 @@
     \end{equation*}
 
 
+    \vspace{20px}
+
+    \item Por la simetría del problema, todos los vectores tendrán la misma dirección, perpendicular a las placas. Fuera del condensador los vectores son nulos.
+
+    En el instante inicial, el vector desplazamiento $\textbf{D}$ presenta una discontinuidad debido a la densidad de carga superficial $\sigma_0$ aplicada.
+
+    Aplicando las ecuaciones constitutivas $\textbf{D} = \varepsilon \textbf{E}$ y $\textbf{J} = \gamma \textbf{E}$ obtenemos la expresión de los campos en el momento
+    en el que el medio empieza a ser conductor.
+
+    \begin{align*}
+        &\textbf{D}  = \sigma_0 \\[6px]
+        & \textbf{E} = \frac{\sigma_0}{\varepsilon} \\[6px]
+        & \textbf{J}  = \frac{\gamma}{\varepsilon} \sigma_0
+    \end{align*}
+
+    La energía electrostática en ese momento se puede calcular como la integral del campo en el volumen del condensador.
+
+    \begin{equation*}
+        W_e = \int_{\mathcal{V}}\varepsilon E^2 dv =  \frac{\sigma_0^2 \, l \, S}{2 \varepsilon}
+    \end{equation*}
+
+    \vspace{20px}
+
+    \item Para obtener la expresión que proporciona la evolución temporal de los campos una vez que el medio se hace conductor aplicamos la
+    ecuación de continuidad para un volumen que incluya la placa con la densidad de carga $\sigma_0$.
+
+    La expresión que obtenemos es:
+
+    \begin{equation*}
+        J (t) =  \frac{\gamma}{\varepsilon} \sigma(t) = - \frac{d \sigma (t)}{dt}
+    \end{equation*}
+
+    Esta es una ecuación diferencial de primer grado cuya solución es:
+
+    \begin{equation*}
+        \sigma(t) = \sigma_0 \, e^{-\frac{\gamma}{\varepsilon}t}
+    \end{equation*}
+
+    Los tres campos tienen la misma expresión funcional:
+
+    \begin{align*}
+        & D(t)  = \sigma_0 \, e^{-\frac{\gamma}{\varepsilon}t} \\[6px]
+        & E(t) = \frac{\sigma_0}{\varepsilon} \, e^{-\frac{\gamma}{\varepsilon}t} \\[6px]
+        & J(t)  = \frac{\gamma}{\varepsilon} \sigma_0 \, e^{-\frac{\gamma}{\varepsilon}t}
+    \end{align*}
+
+    \vspace{20px}
+
+    \item La energía disipada por efecto Joule se puede calcular integrando a lo largo de todo el tiempo la potencia disipada, que
+    se puede escribir como función de los campos calculados.
+
+    \begin{align*}
+        W & =  \int_0^{\infty} P \, dt =  \int_0^{\infty} \int_{\mathcal{V}} \gamma \, E^2 \, dv \, dt =
+        \int_0^{\infty} \int_{\mathcal{V}} \gamma \, \frac{\sigma_0^2}{\varepsilon^2}  \, e^{-2\frac{\gamma}{\varepsilon}t}  \, dv \, dt = \\[6px]
+        & =  \gamma \, \frac{\sigma_0^2}{\varepsilon^2}  \, l \, S  \int_0^{\infty} e^{-2\frac{\gamma}{\varepsilon}t} \, dt =
+        \frac{\sigma_0^2 \, l \, S}{2 \varepsilon}
+    \end{align*}
+
+    Este es el mimo valor obtenido en el apartado b para la energía electrostática inicial, por lo que toda la energía del sistema se disipa
+    en el momento que toda la carga queda neutralizada, lo que sucede cuando el tiempo tiende a infinito.
+
 \end{enumerate}
