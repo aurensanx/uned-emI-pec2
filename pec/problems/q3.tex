@@ -4,3 +4,34 @@
 \vspace{20px}
 \textit{Solución:}
 \\
+
+Un campo magnético debe ser solenoidal, es decir, las líneas de campo deben ser cerradas, lo que significa que no tienen
+ni fuentes ni sumideros.
+
+Por tanto, si $\nabla \cdot \textbf{F} = 0$, $\textbf{F}$ puede ser un campo magnético.
+
+La divergencia en coordenadas esféricas viene dada por:
+
+\begin{equation*}
+    \nabla \cdot \textbf{A} = \frac{1}{r^2} \frac{\partial}{\partial r} ( r^2 \, A_r) +
+    \frac{1}{r \, \sen\theta} \frac{\partial}{\partial\theta}
+    (A_\theta \, \sen\theta )
+    +     \frac{1}{r \, \sen\theta} \frac{\partial}{\partial\varphi} A_{\varphi}
+\end{equation*}
+
+Calculamos la divergencia de $\textbf{F}$:
+
+\begin{align*}
+    \nabla \cdot \textbf{F} & = \frac{1}{r^2} \frac{\partial}{\partial r} ( r\,F_0 \, \cos\theta) +
+    \frac{1}{r \, \sen\theta} \frac{\partial}{\partial\theta}
+    \biggl(
+    - \frac{1}{2}  \frac{F_0}{r} \sen^2{\theta}
+    \biggr)
+    + \frac{1}{r \, \sen\theta} \frac{\partial}{\partial \varphi}
+    \biggl(
+    \frac{F_0}{r}
+    \biggr) \\
+    & = \frac{1}{r^2} \, F_0 \, \cos\theta + \frac{1}{r\, \sen\theta} ( - \frac{F_0}{r} \sen\theta \cos\theta ) = 0
+\end{align*}
+
+Por lo tanto, $\textbf{F}$ puede representar un campo magnético $\textbf{B}$.
