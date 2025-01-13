@@ -4,3 +4,50 @@
 \vspace{20px}
 \textit{Solución:}
 \\
+
+La métrica de Coulomb nos dice que la divergencia de $\textbf{A}$ es igual a 0, $\nabla \cdot \textbf{A} = 0$.
+
+En coordenadas cilíndricas la divergencia está dada por la expresión:
+
+\begin{equation*}
+    \nabla \cdot \textbf{A} = \frac{1}{\rho} \frac{\partial}{\partial \rho} ( \rho \, A_\rho )
+    + \frac{1}{\rho} \frac{\partial}{\partial \varphi} A_{\varphi}
+    + \frac{\partial}{\partial z} A_z
+\end{equation*}
+
+Comprobamos los potenciales:
+
+\begin{align*}
+    \nabla \cdot \textbf{A}_1 & = \frac{\partial}{\partial z} ( C \ln\rho) = 0 \\
+    \nabla \cdot \textbf{A}_2 & = \frac{1}{\rho} \frac{\partial}{\partial \rho} \biggl( \rho \; \frac{D}{\rho} \biggr)
+    + \frac{\partial}{\partial z} ( C \ln\rho) = 0
+\end{align*}
+
+Vemos que ambos cumplen la métrica de Coulomb.
+
+El campo magnético $\textbf{B}$ se calcula a partir del rotacional del potencial vector magnético, $ \textbf{B} = \nabla \times \textbf{A}$.
+
+El rotacional en coordenadas cilíndricas está dado por:
+
+\begin{equation*}
+    \nabla \times \textbf{A} =
+    \begin{vmatrix}
+        \textbf{u}_\rho         & \rho \, \textbf{u}_\varphi & \textbf{u}_z          \\[6px]
+        \partial / \partial\rho & \partial / \partial\varphi & \partial / \partial z  \\[6px]
+        A_\rho                  & \rho \, A_\varphi          & A_z                    \\[6px]
+    \end{vmatrix}
+\end{equation*}
+
+Calculamos $\textbf{B}$ a partir de los dos potenciales.
+
+\begin{align*}
+    \nabla \cdot \textbf{A}_1 & = \frac{\partial}{\partial \varphi} ( C \ln\rho) \textbf{u}_\rho -
+    \rho \, \frac{\partial}{\partial \rho} ( C \ln\rho) \textbf{u}_\varphi  = - C \, \textbf{u}_\varphi  \\
+    \nabla \cdot \textbf{A}_2 & = \frac{\partial}{\partial \varphi} ( C \ln\rho) \textbf{u}_\rho +
+    \rho \, \frac{\partial}{\partial z} ( \frac{D}{\rho}) \textbf{u}_\varphi  -
+    \frac{\partial}{\partial \varphi} (  \frac{D}{\rho}) \textbf{u}_z -
+    \rho \, \frac{\partial}{\partial \rho} ( C \ln\rho) \textbf{u}_\varphi  = - C \, \textbf{u}_\varphi
+\end{align*}
+
+El resultado es el mismo para los dos potenciales vectores magnéticos, por lo que hemos demostrado que producen el mismo campo magnético,
+$\textbf{B} = - C \, \textbf{u}_\varphi$.
