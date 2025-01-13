@@ -6,7 +6,7 @@
 
 \begin{enumerate}
 [label=\alph*)]
-    \item Se puede calcular la energía electrostática en la región del espacio a partir del campo como:
+    \item Se puede calcular la energía electrostática en la región del espacio a partir del campo según la expresión:
 
     \begin{equation*}
         W_e = \frac{1}{2} \int_{\mathcal V} \varepsilon \, E^2 \, dv
@@ -24,7 +24,7 @@
     \item Según los resultados del ejemplo 9.4, en el que la esfera conductora está unida a tierra, el potencial en el exterior de dicha esfera es:
 
     \begin{equation*}
-        V(r, \theta) = - E ( 1 - \frac{a^3}{r^3})  r  \cos\theta
+        V(r, \theta) = - E_0 ( 1 - \frac{a^3}{r^3})  r  \cos\theta
     \end{equation*}
 
     Podemos entonces calcular el campo eléctrico a partir de la relación $\textbf{E} = - \nabla V$.
@@ -40,19 +40,20 @@
     El campo eléctrico resulta:
 
     \begin{align*}
-        \textbf{E} & = \frac{\partial}{\partial r} \biggl[E \Bigl(1 - \frac{a^3}{r^3} \Bigr) r \cos\theta \biggr] \textbf{u}_r +
-        \frac{1}{r}\frac{\partial}{\partial \theta} \biggl[E \Bigl(1 - \frac{a^3}{r^3} \Bigr) r \cos\theta \biggr] \textbf{u}_{\theta} \\[6px]
-        & = E \cos\theta \Bigl(1 + \frac{2a^3}{r} \Bigr) \textbf{u}_r -
-        E \Bigl(1 - \frac{a^3}{r^3} \Bigr) \sen\theta \textbf{u}_{\theta}
+        \textbf{E} & = \frac{\partial}{\partial r} \biggl[E_0 \Bigl(1 - \frac{a^3}{r^3} \Bigr) r \cos\theta \biggr] \textbf{u}_r +
+        \frac{1}{r}\frac{\partial}{\partial \theta} \biggl[E_0 \Bigl(1 - \frac{a^3}{r^3} \Bigr) r \cos\theta \biggr] \textbf{u}_{\theta} \\[6px]
+        & = E_0 \cos\theta \Bigl(1 + \frac{2a^3}{r} \Bigr) \textbf{u}_r -
+        E_0  \sen\theta\Bigl(1 - \frac{a^3}{r^3} \Bigr)  \textbf{u}_{\theta}
     \end{align*}
 
     \vspace{20px}
 
-    \item Es un sistema equivalente al de 9.4, en el que la esfera conductora está conectada a tierra, y por tanto, no puede acumular carga electrostática.
+    \item El sistema del problema es un sistema equivalente al de 9.4, en el que la esfera conductora está conectada a tierra, y por tanto, no puede acumular carga electrostática.
     En ese caso, la energía de la esfera sumergida en el campo es 0.
 
     \vspace{20px}
 
-    \item ¿Infinito si se calcula el límite de la integral? ¿Qué sentido físico tiene?
+    \item Tal y como se ha modelado el problema, no existe un cambio de potencial entre el infinito ($V = 0$), y el potencial que tiene la esfera conductora
+    conectada a tierra. Por tanto, el trabajo que cuesta introducir la esfera en la región donde se establece el campo es 0.
 
 \end{enumerate}
