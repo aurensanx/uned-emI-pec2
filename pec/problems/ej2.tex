@@ -7,5 +7,71 @@
 
 \begin{enumerate}
 [label=\alph*)]
-    \item La polarización
+    \item Primero, hacemos coincidir el cable de alta tensión con una de las equipotenciales que genera una línea con densidad de carga
+    lineal $\lambda$.
+
+    La posición de esta línea de carga está dada por la relación $h^2 = d^2 + a^2$, siendo $h$ la altura del centro del cable de alta tensión, $a$ el radio del
+    cable y $d$ la posición de la densidad de carga lineal que genera el cilindro que coincide con el cable de alta tensión.
+
+    Entonces, la distribución de cargas imagen que resuelve el problema es una línea con densidad lineal de carga $-\lambda$ en la posición $(0, -d, 0)$, es
+    decir, debajo del suelo una distancia $d$.
+
+    \vspace{20px}
+
+    \item Siendo $d$ la distancia de la posición de la línea de carga ficticia mencionada en el apartado anterior hasta el suelo, la expresión del potencial es
+    la que sigue:
+
+    \begin{equation*}
+        V = - \frac{\lambda}{2\pi\varepsilon_0} \ln{\frac{|y - d|}{|y+d|}}
+    \end{equation*}
+
+    Calculamos el campo eléctrico mediante su relación con el potencial eléctrico:
+
+    \begin{equation*}
+        \textbf{E} = \frac{\lambda}{2\pi\varepsilon_0} \frac{(y+d)}{(y-d)} \frac{(2d)}{(y+d)^2} \textbf{u}_y
+        = - \frac{\lambda d}{\pi \varepsilon_0 (d^2 - y^2)}  \textbf{u}_y
+    \end{equation*}
+
+    Utilizando la relación del potencial con la constante $K$ para equipotenciales de la línea de carga:
+
+    \begin{equation*}
+        V = \frac{\lambda}{2\pi\varepsilon_0} \ln{K},
+    \end{equation*}
+
+    podemos escribir el campo eléctrico como:
+
+    \begin{equation*}
+        \textbf{E} = - \frac{2 V_0 d}{(d^2 - y^2) \ln{K} }  \textbf{u}_y
+    \end{equation*}
+
+    \vspace{20px}
+
+    \item Calculamos la constante K de la expresión anterior con los datos proporcionados:
+
+    \begin{equation*}
+        K^2 - 2K\frac{h}{a} + 1 = 0 \hspace{12px} \Rightarrow \hspace{12px}  K^2 - 2400K + 1 = 0
+    \end{equation*}
+
+    De las 2 soluciones de esta ecuación, nos quedamos con la que hace $K > 1$, es decir, $K \sim 2400$.
+
+    Sustituyendo el resto de datos en la expresión del campo eléctrico descrita en el apartado b, tenemos:
+
+    \begin{equation*}
+        \textbf{E} = - \frac{2 \times 4 \times 10^5 V}{ \sqrt {12^2-0,01^2}  m^2  \ln{2400}}  \textbf{u}_y = -8,565 \frac{kV}{m}  \textbf{u}_y
+    \end{equation*}
+
+    \vspace{20px}
+
+    \item En el exterior del cable tenemos $y = h - a$. Utilizando la expresión del campo eléctrico calculada anteriormente, tenemos:
+
+
+    \begin{equation*}
+        \textbf{E} = - \frac{V_0 \sqrt{h^2 - a^2}}{ a (h - a) \ln{K}}  \textbf{u}_y
+    \end{equation*}
+
+    Evaluando los valores numéricos, obtenemos un campo de $- 5,144 \; MV /m \; \textbf{u}_y$.
+
+    Como este resultado es mayor que la rigidez dieléctrica del aire, que es el valor límite en el cual el aire (o cualquier otro material)
+    pierde su capacidad aislante y pasa a ser conductor, se produce la ruptura dieléctrica y se producirá una chispa y una descarga.
+
 \end{enumerate}
